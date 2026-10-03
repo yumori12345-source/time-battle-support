@@ -1,0 +1,459 @@
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TIME BATTLE - Support</title>
+
+    <meta name="description"
+          content="TIME BATTLEの公式サポートページです。不具合の報告、ご意見・ご要望、お問い合わせはこちらからご連絡ください。">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Helvetica Neue",
+                "Hiragino Kaku Gothic ProN",
+                "Hiragino Sans",
+                Arial,
+                sans-serif;
+
+            background:
+                radial-gradient(circle at 50% 0%, #202060 0%, #0b0b18 42%, #05050c 100%);
+
+            color: #f5f5ff;
+            line-height: 1.8;
+        }
+
+        a {
+            color: #66d9ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: min(900px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 72px 0 56px;
+            text-align: center;
+        }
+
+        .logo {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 18px;
+
+            border: 1px solid rgba(102, 217, 255, 0.55);
+            border-radius: 999px;
+
+            color: #66d9ff;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+
+            background: rgba(102, 217, 255, 0.06);
+            box-shadow: 0 0 24px rgba(102, 217, 255, 0.08);
+        }
+
+        h1 {
+            margin: 0;
+
+            font-size: clamp(38px, 8vw, 72px);
+            font-weight: 900;
+            letter-spacing: 0.08em;
+
+            color: #ffffff;
+
+            text-shadow:
+                0 0 8px rgba(102, 217, 255, 0.8),
+                0 0 24px rgba(102, 217, 255, 0.35);
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+
+            color: #b9bbd5;
+            font-size: 15px;
+            letter-spacing: 0.08em;
+        }
+
+        main {
+            padding-bottom: 70px;
+        }
+
+        section {
+            margin-bottom: 24px;
+            padding: 28px;
+
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 20px;
+
+            background: rgba(16, 16, 32, 0.78);
+
+            box-shadow:
+                0 14px 40px rgba(0, 0, 0, 0.22),
+                inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            margin: 0 0 18px;
+
+            color: #66d9ff;
+            font-size: 21px;
+            font-weight: 800;
+
+            letter-spacing: 0.04em;
+        }
+
+        h3 {
+            margin: 22px 0 8px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        p {
+            margin: 0 0 14px;
+            color: #d7d8e8;
+            font-size: 15px;
+        }
+
+        ul {
+            margin: 10px 0 0;
+            padding-left: 22px;
+            color: #d7d8e8;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        .game-modes {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .mode {
+            padding: 16px;
+
+            border: 1px solid rgba(102, 217, 255, 0.12);
+            border-radius: 14px;
+
+            background: rgba(102, 217, 255, 0.045);
+        }
+
+        .mode strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .mode span {
+            display: block;
+            color: #aeb0c8;
+            font-size: 13px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .email-button {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 13px 22px;
+
+            border-radius: 12px;
+
+            background: #66d9ff;
+            color: #071018;
+
+            font-weight: 800;
+            letter-spacing: 0.03em;
+
+            box-shadow:
+                0 0 22px rgba(102, 217, 255, 0.2);
+
+            transition: transform 0.15s ease,
+                        box-shadow 0.15s ease;
+        }
+
+        .email-button:hover {
+            text-decoration: none;
+            transform: translateY(-1px);
+
+            box-shadow:
+                0 0 30px rgba(102, 217, 255, 0.35);
+        }
+
+        .privacy {
+            text-align: center;
+        }
+
+        .privacy a {
+            display: inline-block;
+            margin-top: 4px;
+            font-weight: 700;
+        }
+
+        footer {
+            padding: 30px 0 50px;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+            text-align: center;
+            color: #777a96;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 52px 0 38px;
+            }
+
+            section {
+                padding: 22px 20px;
+                border-radius: 16px;
+            }
+
+            .game-modes {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+
+            p,
+            li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+
+        <div class="logo">
+            TIME BATTLE SUPPORT
+        </div>
+
+        <h1>TIME BATTLE</h1>
+
+        <p class="subtitle">
+            NEON TIMER GAME
+        </p>
+
+    </div>
+</header>
+
+
+<main>
+
+    <div class="container">
+
+        <section>
+
+            <h2>TIME BATTLEについて</h2>
+
+            <p>
+                「TIME BATTLE」は、時間感覚や判断力を使って楽しむ
+                シンプルな対戦ゲームです。
+            </p>
+
+            <p>
+                友達や家族と一緒に、時間を見極める緊張感と
+                相手との駆け引きをお楽しみください。
+            </p>
+
+            <div class="game-modes">
+
+                <div class="mode">
+                    <strong>TIME BATTLE</strong>
+                    <span>
+                        目標時間を超えないように、
+                        タイマーを止めるタイミングを競います。
+                    </span>
+                </div>
+
+                <div class="mode">
+                    <strong>HIDDEN TIME</strong>
+                    <span>
+                        時間を見ずに、自分の感覚だけを頼りに
+                        タイマーを止めます。
+                    </span>
+                </div>
+
+                <div class="mode">
+                    <strong>NEAR TIME</strong>
+                    <span>
+                        目標時間にどれだけ近づけるかを競います。
+                    </span>
+                </div>
+
+                <div class="mode">
+                    <strong>HIT &amp; BLOW</strong>
+                    <span>
+                        数字を使って相手の答えを推理する
+                        ゲームモードです。
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>お問い合わせ</h2>
+
+            <p>
+                TIME BATTLEに関するお問い合わせ、
+                不具合の報告、ご意見・ご要望などがございましたら、
+                以下のメールアドレスまでご連絡ください。
+            </p>
+
+            <div class="contact">
+
+                <a
+                    class="email-button"
+                    href="mailto:yuagame12345@gmail.com"
+                >
+                    メールでお問い合わせ
+                </a>
+
+            </div>
+
+            <h3>お問い合わせの際のお願い</h3>
+
+            <p>
+                不具合についてお問い合わせいただく場合は、
+                可能な範囲で以下の情報をお知らせください。
+            </p>
+
+            <ul>
+                <li>使用しているiPhoneの機種</li>
+                <li>iOSのバージョン</li>
+                <li>TIME BATTLEのアプリバージョン</li>
+                <li>発生した問題の内容</li>
+                <li>問題が発生した画面や操作</li>
+                <li>必要に応じてスクリーンショット</li>
+            </ul>
+
+        </section>
+
+
+        <section>
+
+            <h2>よくあるお問い合わせ</h2>
+
+            <h3>ゲームが正常に動作しません</h3>
+
+            <p>
+                アプリを一度終了して再起動してください。
+                改善しない場合は、使用しているiPhoneの機種、
+                iOSバージョン、発生した問題を添えて
+                お問い合わせください。
+            </p>
+
+            <h3>広告について</h3>
+
+            <p>
+                無料版では広告が表示されます。
+                広告の表示状況は通信環境などによって
+                一時的に変わる場合があります。
+            </p>
+
+            <h3>プレミアム機能について</h3>
+
+            <p>
+                TIME BATTLEでは、アプリ内購入によって
+                プレミアム機能を利用できます。
+                購入に関する問題が発生した場合は、
+                App Storeの購入情報をご確認のうえ、
+                必要に応じてお問い合わせください。
+            </p>
+
+        </section>
+
+
+        <section class="privacy">
+
+            <h2>プライバシーポリシー</h2>
+
+            <p>
+                TIME BATTLEにおける個人情報および
+                データの取り扱いについては、
+                以下のプライバシーポリシーをご確認ください。
+            </p>
+
+            <a
+                href="https://yumori12345-source.github.io/time-battle-privacy/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                プライバシーポリシーを見る
+            </a>
+
+        </section>
+
+
+        <section>
+
+            <h2>開発者</h2>
+
+            <p>
+                TIME BATTLE運営
+            </p>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 TIME BATTLE運営
+        </p>
+
+        <p>
+            TIME BATTLE Support
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
+```
